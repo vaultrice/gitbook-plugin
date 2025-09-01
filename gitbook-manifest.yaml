@@ -1,7 +1,7 @@
 name: vaultrice-voting-widget
 title: Vaultrice Voting Integration
 description: Add interactive voting widgets to your GitBook documentation with real-time results.
-visibility: unlisted
+visibility: public
 organization: lTQNmOvSMj7VuZMuxuG8
 icon: ./assets/icon.png
 previewImages:
@@ -36,7 +36,8 @@ blocks:
     title: Vaultrice Voting Widget
     description: Insert a Vaultrice voting widget.
     categories:
-      - widgets
+      - Content
+      - Other
 
 # Integration user-configurable settings
 configurations:
