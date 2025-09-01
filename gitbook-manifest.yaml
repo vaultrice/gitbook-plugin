@@ -36,8 +36,8 @@ blocks:
     title: Vaultrice Voting Widget
     description: Insert a Vaultrice voting widget.
     categories:
-      - Content
-      - Other
+      - content
+      - other
 
 # Integration user-configurable settings
 configurations:
