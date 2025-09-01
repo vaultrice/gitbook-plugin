@@ -1,0 +1,15 @@
+{
+    "extends": "@gitbook/tsconfig/integration.json",
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
+        "moduleResolution": "bundler",
+        "module": "ESNext",
+        "strict": true,
+        "target": "es2020",
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "outDir": "lib"
+    },
+    "include": ["src"]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "vaultrice-voting-gitbook-integration",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "gitbook check",
+    "publish-integration": "npm run build && gitbook publish .",
+    "unpublish-integration": "gitbook unpublish vaultrice-voting-widget",
+    "dev": "npm run build && gitbook dev",
+    "build:widget": "vite build --config vite.widget.config.ts && cp dist/voting.js src/script.raw.js",
+    "build": "npm run build:widget",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@gitbook/runtime": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "*",
+    "@gitbook/cli": "^0.25.0",
+    "@gitbook/tsconfig": "*",
+    "@types/node": "24.3.0",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "@vaultrice/react-components": "0.9.14",
+    "@vitejs/plugin-react": "5.0.2",
+    "esbuild": "0.25.9",
+    "eslint": "9.34.0",
+    "eslint-plugin-import": "2.32.0",
+    "neostandard": "0.12.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "typescript": "5.9.2",
+    "vite": "7.1.3"
+  }
+}
