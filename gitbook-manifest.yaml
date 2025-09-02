@@ -21,7 +21,6 @@ summary: |
   - **Real-time voting**: Vote counts update instantly across all clients
   - **No backend required**: Powered by Vaultrice's encrypted key-value storage
   - **Persistent results**: Vote data is stored securely and persists across sessions
-  - **User tracking**: Prevents duplicate voting from the same user
   - **Customizable**: Configure titles, descriptions, and voting options
 
   # How it works
