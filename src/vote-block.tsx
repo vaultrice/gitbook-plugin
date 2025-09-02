@@ -17,7 +17,6 @@ const DEFAULTS = {
   description: 'Choose your preferred option',
   choices: JSON.stringify(DEFAULT_CHOICES, null, 2),
   voteLabel: 'vote',
-  enableUserTracking: true,
   showPercentages: false,
   showTotalVotes: true,
   ttl: 60 * 60 * 1000,
@@ -37,7 +36,6 @@ export const VoteBlock = createComponent({
     description: props.description ?? DEFAULTS.description,
     choices: props.choices ?? DEFAULTS.choices, // JSON string
     voteLabel: props.voteLabel ?? DEFAULTS.voteLabel,
-    enableUserTracking: props.enableUserTracking ?? DEFAULTS.enableUserTracking,
     showPercentages: props.showPercentages ?? DEFAULTS.showPercentages,
     showTotalVotes: props.showTotalVotes ?? DEFAULTS.showTotalVotes,
     ttl: props.ttl ?? DEFAULTS.ttl,
@@ -78,7 +76,6 @@ export const VoteBlock = createComponent({
           description: element.state.description,
           choices: JSON.stringify(parsedChoices, null, 2), // store normalized JSON string
           voteLabel: element.state.voteLabel,
-          enableUserTracking: !!element.state.enableUserTracking,
           showPercentages: !!element.state.showPercentages,
           showTotalVotes: !!element.state.showTotalVotes,
           ttl: Number(element.state.ttl) || DEFAULTS.ttl,
@@ -101,7 +98,6 @@ export const VoteBlock = createComponent({
           description: p.description ?? DEFAULTS.description,
           choices: p.choices ?? DEFAULTS.choices,
           voteLabel: p.voteLabel ?? DEFAULTS.voteLabel,
-          enableUserTracking: p.enableUserTracking ?? DEFAULTS.enableUserTracking,
           showPercentages: p.showPercentages ?? DEFAULTS.showPercentages,
           showTotalVotes: p.showTotalVotes ?? DEFAULTS.showTotalVotes,
           ttl: p.ttl ?? DEFAULTS.ttl,
@@ -154,7 +150,6 @@ export const VoteBlock = createComponent({
             apiKey: installConfig?.apiKey,
             apiSecret: installConfig?.apiSecret
           }),
-          enableUserTracking: element.dynamicState('enableUserTracking'),
           showPercentages: element.dynamicState('showPercentages'),
           showTotalVotes: element.dynamicState('showTotalVotes'),
           ttl: element.dynamicState('ttl')
@@ -231,13 +226,6 @@ export const VoteBlock = createComponent({
 
               <card title='Options'>
                 <hstack>
-                  <text style='bold'>Enable User Tracking</text>
-                  <switch
-                    state='enableUserTracking'
-                  />
-
-                  <divider size='small' />
-
                   <text style='bold'>Show Percentages</text>
                   <switch
                     state='showPercentages'
